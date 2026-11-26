@@ -11,7 +11,7 @@ description: GeonWoo Choi, Ph.D. student at the Biomedical Data Science Lab, Kan
 <div class="home-hero">
 <div class="h-eyebrow">Ph.D. student · Biomedical Data Science Lab</div>
 <h1>GeonWoo <span>Choi</span></h1>
-<p class="h-lead">I work on machine learning for drug discovery at Kangwon National University: models that generate and optimize molecules, and models that predict how those molecules behave in the body.</p>
+<p class="h-lead">🚧 This site is under construction.</p>
 <div class="h-actions">
 <a class="h-btn primary" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-flask"></i> Projects</a>
 <a class="h-btn" href="{{ '/blog/' | relative_url }}"><i class="fa-solid fa-pen-nib"></i> Blog</a>
@@ -32,9 +32,9 @@ description: GeonWoo Choi, Ph.D. student at the Biomedical Data Science Lab, Kan
 <section>
 <h2 class="h-label">Education</h2>
 <ul class="h-timeline">
-<li class="now"><div class="h-when">2025 – present</div><h3>Ph.D. student, Data Science</h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
-<li><div class="h-when">2023 – 2025</div><h3>M.S.</h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
-<li><div class="h-when">2019 – 2023</div><h3>B.S.</h3><p>Kangwon National University</p></li>
+<li class="now"><div class="h-when">2025 – present</div><h3><a href="/phd/">Ph.D. student, Data Science</a></h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
+<li><div class="h-when">2023 – 2025</div><h3><a href="/ms/">M.S.</a></h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
+<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">B.S.</a></h3><p>Kangwon National University</p></li>
 </ul>
 </section>
 

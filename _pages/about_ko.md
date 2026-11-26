@@ -3,7 +3,7 @@ layout: default
 title: 한국어
 permalink: /ko/
 nav: true
-nav_order: 6
+nav_order: 7
 description: 강원대학교 의생명과학연구실(BDS Lab) 박사과정.
 ---
 
@@ -13,7 +13,7 @@ description: 강원대학교 의생명과학연구실(BDS Lab) 박사과정.
 <div class="home-hero">
 <div class="h-eyebrow">박사과정 · 의생명과학연구실 (BDS Lab)</div>
 <h1>GeonWoo <span>Choi</span></h1>
-<p class="h-lead">강원대학교에서 머신러닝으로 신약개발 문제를 풉니다. 분자를 생성하고 최적화하는 모델, 그리고 그 분자가 몸 안에서 어떻게 움직이는지 예측하는 모델을 연구합니다.</p>
+<p class="h-lead">🚧 제작 중입니다.</p>
 <div class="h-actions">
 <a class="h-btn primary" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-flask"></i> 프로젝트</a>
 <a class="h-btn" href="{{ '/blog/' | relative_url }}"><i class="fa-solid fa-pen-nib"></i> 블로그</a>
@@ -34,9 +34,9 @@ description: 강원대학교 의생명과학연구실(BDS Lab) 박사과정.
 <section>
 <h2 class="h-label">학력</h2>
 <ul class="h-timeline">
-<li class="now"><div class="h-when">2025 – 현재</div><h3>박사과정, 데이터사이언스학과</h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
-<li><div class="h-when">2023 – 2025</div><h3>석사</h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
-<li><div class="h-when">2019 – 2023</div><h3>학사</h3><p>강원대학교</p></li>
+<li class="now"><div class="h-when">2025 – 현재</div><h3><a href="/phd/">박사과정, 데이터사이언스학과</a></h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
+<li><div class="h-when">2023 – 2025</div><h3><a href="/ms/">석사</a></h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
+<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">학사</a></h3><p>강원대학교</p></li>
 </ul>
 </section>
 
