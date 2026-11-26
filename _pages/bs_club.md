@@ -8,7 +8,9 @@ nav: false
 
 {% include bs_tabs.liquid active="club" %}
 
-🚧 This page is under construction. (제작 중입니다.)
+I was a member of **Noripae Hanmadang (놀이패 한마당)**, a university-wide student club at Kangwon National University, and served as its president in the spring semester of 2020.
+
+🚧 More to come. (제작 중입니다.)
 
 ## Posts
 
