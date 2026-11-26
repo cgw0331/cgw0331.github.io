@@ -1,0 +1,66 @@
+<style>
+  .blog-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+  .blog-side { position: sticky; top: 5.5rem; font-size: 0.95rem; }
+  .blog-side section { margin-bottom: 1.8rem; }
+  .blog-side h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--global-text-color-light); margin: 0 0 0.6rem; }
+  .blog-side ul { list-style: none; margin: 0; padding: 0; }
+  .blog-side li { margin: 0; }
+  .blog-side a { display: flex; justify-content: space-between; gap: 0.5rem; align-items: baseline; padding: 0.3rem 0.55rem; border-radius: 8px; color: var(--global-text-color) !important; text-decoration: none !important; }
+  .blog-side a:hover { background: var(--global-card-bg-color); color: var(--global-theme-color) !important; }
+  .blog-side a.active { background: var(--global-theme-color); color: #fff !important; }
+  .blog-side .n { flex: none; font-size: 0.8rem; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+  .blog-side a:hover .n, .blog-side a.active .n { color: inherit; }
+  .blog-side .years { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .blog-side .years a { padding: 0.2rem 0.6rem; border: 1px solid var(--global-divider-color); border-radius: 999px; font-size: 0.85rem; }
+  @media (max-width: 768px) {
+    .blog-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+    .blog-side { position: static; border-bottom: 1px solid var(--global-divider-color); padding-bottom: 1rem; }
+    .blog-side section { margin-bottom: 1rem; }
+    .blog-side ul { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .blog-side a { border: 1px solid var(--global-divider-color); border-radius: 999px; padding: 0.2rem 0.7rem; }
+  }
+</style>
+
+{% assign period_slugs = "bs,ms,phd" | split: "," %}
+{% assign period_names = "B.S.,M.S.,Ph.D." | split: "," %}
+
+<aside class="blog-side">
+  <section>
+    <h3>All</h3>
+    <ul>
+      <li><a href="{{ '/blog/' | relative_url }}" {% if include.active == 'all' %}class="active"{% endif %}>All posts <span class="n">{{ site.posts.size }}</span></a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Period</h3>
+    <ul>
+      {% for slug in period_slugs %}
+        {% assign n = site.tags[slug] | size %}
+        {% if n > 0 %}
+          <li><a href="{{ slug | prepend: '/blog/tag/' | relative_url }}">{{ period_names[forloop.index0] }} <span class="n">{{ n }}</span></a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Category</h3>
+    <ul>
+      {% assign cats = site.categories | sort %}
+      {% for cat in cats %}
+        <li><a href="{{ cat[0] | slugify | prepend: '/blog/category/' | relative_url }}">{{ cat[0] }} <span class="n">{{ cat[1] | size }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Year</h3>
+    <div class="years">
+      {% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+      {% for y in years %}
+        <a href="{{ y.name | prepend: '/blog/' | relative_url }}">{{ y.name }} <span class="n">{{ y.items | size }}</span></a>
+      {% endfor %}
+    </div>
+  </section>
+</aside>
