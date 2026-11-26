@@ -36,7 +36,7 @@ description: 강원대학교 의생명과학연구실(BDS Lab) 박사과정.
 <ul class="h-timeline">
 <li class="now"><div class="h-when">2025 – 현재</div><h3><a href="/phd/">박사과정, 데이터사이언스학과</a></h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
 <li><div class="h-when">2023 – 2025</div><h3><a href="/ms/">석사</a></h3><p>강원대학교 · 의생명과학연구실 (Biomedical Data Science Lab)</p></li>
-<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">학사, 컴퓨터정보통신공학전공</a></h3><p>강원대학교 IT대학 컴퓨터학부</p></li>
+<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">학사, 컴퓨터정보통신공학전공</a></h3><p>강원대학교 IT대학 컴퓨터학부 · 학점 4.31 / 4.5</p></li>
 </ul>
 </section>
 

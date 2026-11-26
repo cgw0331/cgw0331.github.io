@@ -34,7 +34,7 @@ description: GeonWoo Choi, Ph.D. student at the Biomedical Data Science Lab, Kan
 <ul class="h-timeline">
 <li class="now"><div class="h-when">2025 – present</div><h3><a href="/phd/">Ph.D. student, Data Science</a></h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
 <li><div class="h-when">2023 – 2025</div><h3><a href="/ms/">M.S.</a></h3><p>Kangwon National University · Biomedical Data Science Lab (BDS Lab)</p></li>
-<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">B.S., Computer and Communications Engineering</a></h3><p>Kangwon National University</p></li>
+<li><div class="h-when">2019 – 2023</div><h3><a href="/bs/">B.S., Computer and Communications Engineering</a></h3><p>Kangwon National University · GPA 4.31 / 4.5</p></li>
 </ul>
 </section>
 
