@@ -1,0 +1,320 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 첫 논문 - KDBC 2021 | GeonWoo Choi </title> <meta name="author" content="GeonWoo Choi"> <meta name="description" content="학부연구생으로 쓴 첫 학회 논문. VAE에 결합 친화력 예측기를 붙여 BCL-2에 결합하는 화합물을 생성했습니다."> <meta name="keywords" content="GeonWoo Choi, data science, AI drug discovery, molecular generation, blog"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AA&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://cgw0331.github.io/blog/2021/kdbc-2021-first-paper/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">GeonWoo</span> Choi </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/bs/">B.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/ms/">M.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/phd/">Ph.D. </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/ko/">한국어 </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">첫 논문 - KDBC 2021</h1> <p class="post-meta"> Created on October 28, 2021 </p> <p class="post-tags"> <a href="/blog/2021"> <i class="fa-solid fa-calendar fa-sm"></i> 2021 </a>   ·   <a href="/blog/tag/bs"> <i class="fa-solid fa-hashtag fa-sm"></i> bs</a>   ·   <a href="/blog/category/lab"> <i class="fa-solid fa-tag fa-sm"></i> lab</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>🚧 초안입니다. 정리 중이에요.</p> <p>학부연구생으로 BDS Lab에 들어간 뒤 처음 쓴 논문입니다. 3학년 2학기에 KDBC(한국데이터베이스학술대회)에 냈습니다.</p> <ul> <li> <strong>제목</strong>: 약물 표적 결합 친화력을 갖는 화합물을 생성하기 위한 딥러닝 모델</li> <li> <strong>영문 제목</strong>: Deep Learning Model to Generate Chemical Compounds with Drug Target Binding Affinity</li> <li> <strong>저자</strong>: 최건우, 장효순, 박치현 (강원대학교 IT대학 컴퓨터공학과)</li> </ul> <h2 id="무슨-문제를-풀었나">무슨 문제를 풀었나</h2> <p>신약 개발은 후보 화합물이 너무 많아서 어렵습니다. PubChem에 등록된 화합물만 1억 개가 넘습니다. VAE로 새로운 화학식을 생성하는 연구는 많았지만, 생성된 분자가 잠재 공간에서 가까이 있다고 해서 약으로서의 특성까지 비슷하지는 않다는 문제가 있었습니다.</p> <p>logP, SAS, QED 같은 화학적 특성을 맞추는 연구는 있었는데, 정작 표적 단백질과 결합하는지(CPI)를 보지 않으면 실제 약이 되기 어렵다는 한계가 있었습니다.</p> <h2 id="어떻게-했나">어떻게 했나</h2> <p>VAE에 결합 친화력(Binding Affinity)을 예측하는 predictor를 붙여서 <strong>함께 학습</strong>시켰습니다.</p> <ul> <li>인코더와 디코더는 GRU + 완전연결 계층</li> <li>학습 데이터는 ChEMBL의 SMILES 약 100만 개, one-hot 인코딩 후 128 크기로 임베딩</li> <li>표적 단백질은 BCL-2. 세포 사멸을 조절하는 단백질이고, 유방암·폐암의 원인 인자로 연구되지만 아직 임상을 완전히 통과한 억제제가 없어서 골랐습니다</li> <li>생성된 분자의 정답 결합력 데이터는 없으니, 기존에 나온 결합 친화력 예측 모델로 정답값을 만들어 썼습니다</li> </ul> <p>잠재 공간은 경사 하강법으로 탐색하되, 학습된 매니폴드를 벗어나지 않도록 업데이트에 제한을 걸어서 이상점이 나올 가능성을 줄였습니다.</p> <h2 id="결과">결과</h2> <p>탐색 횟수가 늘수록 결합 친화력이 올라갔습니다(약 5.5 → 7.0). 탐색을 마친 잠재 벡터 5개를 디코딩해보니 유효한 SMILES가 나왔고, 독립된 모델로 다시 측정한 값(9.0~9.8)과 predictor가 낸 값(8.3~9.1)의 차이가 크지 않아서 predictor가 제대로 동작한다고 볼 수 있었습니다.</p> <h2 id="남은-과제">남은 과제</h2> <p>이 논문은 결합 친화력 하나만 봤습니다. 결합 친화력이 높으면서 약물성(QED, SAs)도 좋은 분자를 찾는 게 다음 과제였고, 실제로 이후 연구가 그 방향으로 이어졌습니다.</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/mmo-vae/">MMO-VAE</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/fruit-box-bot/">사과박스 게임 자동 플레이 봇</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/masters-thesis/">석사 졸업 논문</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/steam-dataset-analysis/">Steam 데이터로 게임 태그별 성공도 분석</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/demo-paper-summary/">논문 요약: DEMO (초록과 서론)</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/thompson-sampling/">톰슨 샘플링 정리</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/cogmol-review/">논문 리뷰 - CogMol</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/vae-presentation/">VAE 발표 준비하며 정리한 것</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2022/database-research-journal/">데이타베이스연구 저널 논문 - 톰슨 샘플링</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2021/unity-minesweeper/">유니티로 만든 지뢰찾기</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 GeonWoo Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-b-s",
+          title: "B.S.",
+          description: "2019 – 2023 · Computer and Communications Engineering, Kangwon National University",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/bs/";
+          },
+        },{id: "nav-m-s",
+          title: "M.S.",
+          description: "2023 – 2025 · Biomedical Data Science Lab, Kangwon National University",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ms/";
+          },
+        },{id: "nav-ph-d",
+          title: "Ph.D.",
+          description: "2025 – present · Biomedical Data Science Lab, Kangwon National University",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/phd/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Publications in reversed chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research projects and things I build for fun.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Code I have published on GitHub.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-한국어",
+          title: "한국어",
+          description: "강원대학교 의생명과학연구실(BDS Lab) 박사과정.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ko/";
+          },
+        },{id: "post-mmo-vae",
+        
+          title: "MMO-VAE",
+        
+        description: "석사 때의 마스크 아이디어를 확장한 다중 목적 분자 최적화 프레임워크.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mmo-vae/";
+          
+        },
+      },{id: "post-사과박스-게임-자동-플레이-봇",
+        
+          title: "사과박스 게임 자동 플레이 봇",
+        
+        description: "화면을 캡처해서 숫자를 읽고 합이 10이 되는 영역을 찾아 드래그하는 봇.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/fruit-box-bot/";
+          
+        },
+      },{id: "post-석사-졸업-논문",
+        
+          title: "석사 졸업 논문",
+        
+        description: "마스크 기반 다중 목적 최적화와 VAE 기반의 신약 디자인.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/masters-thesis/";
+          
+        },
+      },{id: "post-steam-데이터로-게임-태그별-성공도-분석",
+        
+          title: "Steam 데이터로 게임 태그별 성공도 분석",
+        
+        description: "데이터프로그래밍 수업 기말과제. Steam 플랫폼 데이터셋으로 태그별 정규화된 성공도를 봤습니다.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/steam-dataset-analysis/";
+          
+        },
+      },{id: "post-논문-요약-demo-초록과-서론",
+        
+          title: "논문 요약: DEMO (초록과 서론)",
+        
+        description: "Disentangled Molecular Graph Generation via an Invertible Flow Model 논문을 읽으며 정리한 초록과 서론.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/demo-paper-summary/";
+          
+        },
+      },{id: "post-톰슨-샘플링-정리",
+        
+          title: "톰슨 샘플링 정리",
+        
+        description: "멀티 암 밴딧 문제와 톰슨 샘플링, UCB를 공부하며 적어둔 메모.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/thompson-sampling/";
+          
+        },
+      },{id: "post-논문-리뷰-cogmol",
+        
+          title: "논문 리뷰 - CogMol",
+        
+        description: "석사 1학기 랩 세미나에서 발표한 CogMol 리뷰.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/cogmol-review/";
+          
+        },
+      },{id: "post-vae-발표-준비하며-정리한-것",
+        
+          title: "VAE 발표 준비하며 정리한 것",
+        
+        description: "석사 1학기에 VAE를 처음부터 다시 정리하며 만든 발표자료.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/vae-presentation/";
+          
+        },
+      },{id: "post-데이타베이스연구-저널-논문-톰슨-샘플링",
+        
+          title: "데이타베이스연구 저널 논문 - 톰슨 샘플링",
+        
+        description: "4학년 때 1저자로 낸 저널 논문. 리뷰 답변과 수정 과정 기록.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/database-research-journal/";
+          
+        },
+      },{id: "post-첫-논문-kdbc-2021",
+        
+          title: "첫 논문 - KDBC 2021",
+        
+        description: "학부연구생으로 쓴 첫 학회 논문. VAE에 결합 친화력 예측기를 붙여 BCL-2에 결합하는 화합물을 생성했습니다.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/kdbc-2021-first-paper/";
+          
+        },
+      },{id: "post-유니티로-만든-지뢰찾기",
+        
+          title: "유니티로 만든 지뢰찾기",
+        
+        description: "2학년 때 유니티로 만들어본 지뢰찾기.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/unity-minesweeper/";
+          
+        },
+      },{id: "post-웹프로그래밍-과제-모음",
+        
+          title: "웹프로그래밍 과제 모음",
+        
+        description: "2학년 1학기 웹프로그래밍 챕터별 과제와 시계 만들기.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/web-programming/";
+          
+        },
+      },{id: "post-자료구조-한-학기-정리",
+        
+          title: "자료구조 한 학기 정리",
+        
+        description: "2학년 1학기 자료구조 수업을 주차별로 되짚어본 정리.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/data-structures-review/";
+          
+        },
+      },{id: "post-리눅스-프로그래밍-실습-정리",
+        
+          title: "리눅스 프로그래밍 실습 정리",
+        
+        description: "2학년 1학기 리눅스프로그래밍 주차별 실습 내용.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/linux-programming/";
+          
+        },
+      },{id: "post-c-동적-할당과-연결-리스트-연습",
+        
+          title: "C 동적 할당과 연결 리스트 연습",
+        
+        description: "1학년 2학기 C프로그래밍2 시험공부를 하며 직접 짜본 연결 리스트 코드.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/c-linked-list/";
+          
+        },
+      },{id: "post-자바-소켓-통신-에코-서버와-클라이언트",
+        
+          title: "자바 소켓 통신 - 에코 서버와 클라이언트",
+        
+        description: "1학년 2학기 자바 과제로 만든 TCP 에코 서버와 Swing 클라이언트.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/java-socket-echo/";
+          
+        },
+      },{id: "post-자바-애니메이션-과제-공-튀기기",
+        
+          title: "자바 애니메이션 과제 - 공 튀기기",
+        
+        description: "1학년 2학기 자바프로그래밍2에서 Swing과 Timer로 만든 공 튀기기 애니메이션.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/java-bouncing-ball/";
+          
+        },
+      },{id: "projects-fruit-box",
+          title: 'Fruit Box',
+          description: "An apple-box puzzle game, and an attempt to teach a DQN agent to play it",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fruit_box/";
+            },},{id: "projects-mmo-vae",
+          title: 'MMO-VAE',
+          description: "Mask-guided multi-objective molecular optimization with a SELFIES-based variational autoencoder",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mmo_vae/";
+            },},{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/cgw0331", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

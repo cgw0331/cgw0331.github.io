@@ -4,7 +4,7 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AA&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://cgw0331.github.io/blog/2023/demo-paper-summary/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">GeonWoo</span> Choi </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/bs/">B.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/ms/">M.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/phd/">Ph.D. </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/ko/">한국어 </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">논문 요약: DEMO (초록과 서론)</h1> <p class="post-meta"> Created on May 03, 2023 </p> <p class="post-tags"> <a href="/blog/2023"> <i class="fa-solid fa-calendar fa-sm"></i> 2023 </a>   ·   <a href="/blog/tag/ms"> <i class="fa-solid fa-hashtag fa-sm"></i> ms</a>   ·   <a href="/blog/category/research"> <i class="fa-solid fa-tag fa-sm"></i> research</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>석사 1학기 논문 리뷰 발표를 준비하면서 정리한 메모입니다. 대상 논문은 “DEMO: Disentangled Molecular Graph Generation via an Invertible Flow Model”이고, 초록과 서론까지만 적혀 있습니다.</p> <h2 id="초록">초록</h2> <ul> <li>완전히 비지도 학습 방식으로, 분자의 의미적 기능 및 해석 가능한 구조 패턴과 연결된 분리된(disentangled) 잠재변수를 합성해 분자 그래프를 생성하는 플로우 기반 모델 DEMO를 제안한다.</li> <li>DEMO는 VAE 인코더와 플로우 생성기로 구성된다. 인코더는 분자 그래프의 전역 특징을 추출하고, 플로우 생성기는 이 특징을 해석 가능한 분자 구조 특징과 일치하도록 분리하면서 데이터 분포를 학습한다.</li> <li>분자 그래프를 생성할 때는 플로우 생성기를 역방향으로 실행할 수 있다는 특성을 이용한다.</li> <li>두 개의 벤치마크 데이터셋에서 수행한 실험에서 DEMO는 분자 생성 성능이 기존 최고 수준 모델을 넘어섰고, 해석 가능한 분자 그래프 생성으로 가는 첫걸음을 보여준다.</li> </ul> <h2 id="서론">서론</h2> <ul> <li>신약을 만드는 일은 어렵고, 그래서 딥러닝이 주목받고 있다.</li> <li>데이터의 구조나 특성의 잠재 확률 분포를 모델링하는 딥러닝 생성 모델이 분자 그래프 생성에서 높은 성능을 보이고 있다.</li> <li>하지만 기존 분자 생성 모델은 생성 과정을 해석하기 어렵다는 한계가 있다.</li> <li>해석이 어려운 이유는, 기존 모델이 그래프 구조 정보를 연속적인 잠재 표현으로 매핑하면서 잠재 인자들이 서로 엉키는(entangled) 현상을 간과했기 때문이다. 그 결과 학습된 표현을 설명하기 어려워진다.</li> <li>그래서 최근에는 잠재 표현이 엉키지 않게 만드는 분리 표현 학습(disentangled representation learning)이 주목받는다. 데이터의 정보 요소를 분리해서 학습된 잠재 표현을 설명 가능하게 만드는 방식이다.</li> <li>VAE의 목적함수를 수정하는 연구들이 대표적인 흐름 중 하나이다.</li> <li>그래프 도메인에서는 graph/node classification을 개선하기 위해 분리 표현 학습이 연구되었지만, 생성 쪽은 거의 탐구되지 않았다.</li> <li>이 논문은 분자 생성을 이해하기 쉽게 만들기 위해 DisEntangled Molecular graph generatiOn(DEMO)을 제안한다.</li> </ul> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/thompson-sampling/">톰슨 샘플링 정리</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2019/c-linked-list/">C 동적 할당과 연결 리스트 연습</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 GeonWoo Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">GeonWoo</span> Choi </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/bs/">B.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/ms/">M.S. </a> </li> <li class="nav-item "> <a class="nav-link" href="/phd/">Ph.D. </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/ko/">한국어 </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">논문 요약: DEMO (초록과 서론)</h1> <p class="post-meta"> Created on May 03, 2023 </p> <p class="post-tags"> <a href="/blog/2023"> <i class="fa-solid fa-calendar fa-sm"></i> 2023 </a>   ·   <a href="/blog/tag/ms"> <i class="fa-solid fa-hashtag fa-sm"></i> ms</a>   ·   <a href="/blog/category/research"> <i class="fa-solid fa-tag fa-sm"></i> research</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>석사 1학기 논문 리뷰 발표를 준비하면서 정리한 메모입니다. 대상 논문은 “DEMO: Disentangled Molecular Graph Generation via an Invertible Flow Model”이고, 초록과 서론까지만 적혀 있습니다.</p> <h2 id="초록">초록</h2> <ul> <li>완전히 비지도 학습 방식으로, 분자의 의미적 기능 및 해석 가능한 구조 패턴과 연결된 분리된(disentangled) 잠재변수를 합성해 분자 그래프를 생성하는 플로우 기반 모델 DEMO를 제안한다.</li> <li>DEMO는 VAE 인코더와 플로우 생성기로 구성된다. 인코더는 분자 그래프의 전역 특징을 추출하고, 플로우 생성기는 이 특징을 해석 가능한 분자 구조 특징과 일치하도록 분리하면서 데이터 분포를 학습한다.</li> <li>분자 그래프를 생성할 때는 플로우 생성기를 역방향으로 실행할 수 있다는 특성을 이용한다.</li> <li>두 개의 벤치마크 데이터셋에서 수행한 실험에서 DEMO는 분자 생성 성능이 기존 최고 수준 모델을 넘어섰고, 해석 가능한 분자 그래프 생성으로 가는 첫걸음을 보여준다.</li> </ul> <h2 id="서론">서론</h2> <ul> <li>신약을 만드는 일은 어렵고, 그래서 딥러닝이 주목받고 있다.</li> <li>데이터의 구조나 특성의 잠재 확률 분포를 모델링하는 딥러닝 생성 모델이 분자 그래프 생성에서 높은 성능을 보이고 있다.</li> <li>하지만 기존 분자 생성 모델은 생성 과정을 해석하기 어렵다는 한계가 있다.</li> <li>해석이 어려운 이유는, 기존 모델이 그래프 구조 정보를 연속적인 잠재 표현으로 매핑하면서 잠재 인자들이 서로 엉키는(entangled) 현상을 간과했기 때문이다. 그 결과 학습된 표현을 설명하기 어려워진다.</li> <li>그래서 최근에는 잠재 표현이 엉키지 않게 만드는 분리 표현 학습(disentangled representation learning)이 주목받는다. 데이터의 정보 요소를 분리해서 학습된 잠재 표현을 설명 가능하게 만드는 방식이다.</li> <li>VAE의 목적함수를 수정하는 연구들이 대표적인 흐름 중 하나이다.</li> <li>그래프 도메인에서는 graph/node classification을 개선하기 위해 분리 표현 학습이 연구되었지만, 생성 쪽은 거의 탐구되지 않았다.</li> <li>이 논문은 분자 생성을 이해하기 쉽게 만들기 위해 DisEntangled Molecular graph generatiOn(DEMO)을 제안한다.</li> </ul> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/mmo-vae/">MMO-VAE</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/fruit-box-bot/">사과박스 게임 자동 플레이 봇</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/masters-thesis/">석사 졸업 논문</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/steam-dataset-analysis/">Steam 데이터로 게임 태그별 성공도 분석</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/thompson-sampling/">톰슨 샘플링 정리</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/cogmol-review/">논문 리뷰 - CogMol</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/vae-presentation/">VAE 발표 준비하며 정리한 것</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2022/database-research-journal/">데이타베이스연구 저널 논문 - 톰슨 샘플링</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2021/kdbc-2021-first-paper/">첫 논문 - KDBC 2021</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2021/unity-minesweeper/">유니티로 만든 지뢰찾기</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 GeonWoo Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -43,6 +43,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/phd/";
           },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Publications in reversed chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "Research projects and things I build for fun.",
@@ -71,7 +78,51 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/ko/";
           },
-        },{id: "post-논문-요약-demo-초록과-서론",
+        },{id: "post-mmo-vae",
+        
+          title: "MMO-VAE",
+        
+        description: "석사 때의 마스크 아이디어를 확장한 다중 목적 분자 최적화 프레임워크.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mmo-vae/";
+          
+        },
+      },{id: "post-사과박스-게임-자동-플레이-봇",
+        
+          title: "사과박스 게임 자동 플레이 봇",
+        
+        description: "화면을 캡처해서 숫자를 읽고 합이 10이 되는 영역을 찾아 드래그하는 봇.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/fruit-box-bot/";
+          
+        },
+      },{id: "post-석사-졸업-논문",
+        
+          title: "석사 졸업 논문",
+        
+        description: "마스크 기반 다중 목적 최적화와 VAE 기반의 신약 디자인.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/masters-thesis/";
+          
+        },
+      },{id: "post-steam-데이터로-게임-태그별-성공도-분석",
+        
+          title: "Steam 데이터로 게임 태그별 성공도 분석",
+        
+        description: "데이터프로그래밍 수업 기말과제. Steam 플랫폼 데이터셋으로 태그별 정규화된 성공도를 봤습니다.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/steam-dataset-analysis/";
+          
+        },
+      },{id: "post-논문-요약-demo-초록과-서론",
         
           title: "논문 요약: DEMO (초록과 서론)",
         
@@ -93,6 +144,94 @@ ninja.data = [{
             window.location.href = "/blog/2023/thompson-sampling/";
           
         },
+      },{id: "post-논문-리뷰-cogmol",
+        
+          title: "논문 리뷰 - CogMol",
+        
+        description: "석사 1학기 랩 세미나에서 발표한 CogMol 리뷰.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/cogmol-review/";
+          
+        },
+      },{id: "post-vae-발표-준비하며-정리한-것",
+        
+          title: "VAE 발표 준비하며 정리한 것",
+        
+        description: "석사 1학기에 VAE를 처음부터 다시 정리하며 만든 발표자료.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/vae-presentation/";
+          
+        },
+      },{id: "post-데이타베이스연구-저널-논문-톰슨-샘플링",
+        
+          title: "데이타베이스연구 저널 논문 - 톰슨 샘플링",
+        
+        description: "4학년 때 1저자로 낸 저널 논문. 리뷰 답변과 수정 과정 기록.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/database-research-journal/";
+          
+        },
+      },{id: "post-첫-논문-kdbc-2021",
+        
+          title: "첫 논문 - KDBC 2021",
+        
+        description: "학부연구생으로 쓴 첫 학회 논문. VAE에 결합 친화력 예측기를 붙여 BCL-2에 결합하는 화합물을 생성했습니다.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/kdbc-2021-first-paper/";
+          
+        },
+      },{id: "post-유니티로-만든-지뢰찾기",
+        
+          title: "유니티로 만든 지뢰찾기",
+        
+        description: "2학년 때 유니티로 만들어본 지뢰찾기.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/unity-minesweeper/";
+          
+        },
+      },{id: "post-웹프로그래밍-과제-모음",
+        
+          title: "웹프로그래밍 과제 모음",
+        
+        description: "2학년 1학기 웹프로그래밍 챕터별 과제와 시계 만들기.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/web-programming/";
+          
+        },
+      },{id: "post-자료구조-한-학기-정리",
+        
+          title: "자료구조 한 학기 정리",
+        
+        description: "2학년 1학기 자료구조 수업을 주차별로 되짚어본 정리.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/data-structures-review/";
+          
+        },
+      },{id: "post-리눅스-프로그래밍-실습-정리",
+        
+          title: "리눅스 프로그래밍 실습 정리",
+        
+        description: "2학년 1학기 리눅스프로그래밍 주차별 실습 내용.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/linux-programming/";
+          
+        },
       },{id: "post-c-동적-할당과-연결-리스트-연습",
         
           title: "C 동적 할당과 연결 리스트 연습",
@@ -102,6 +241,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2019/c-linked-list/";
+          
+        },
+      },{id: "post-자바-소켓-통신-에코-서버와-클라이언트",
+        
+          title: "자바 소켓 통신 - 에코 서버와 클라이언트",
+        
+        description: "1학년 2학기 자바 과제로 만든 TCP 에코 서버와 Swing 클라이언트.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/java-socket-echo/";
+          
+        },
+      },{id: "post-자바-애니메이션-과제-공-튀기기",
+        
+          title: "자바 애니메이션 과제 - 공 튀기기",
+        
+        description: "1학년 2학기 자바프로그래밍2에서 Swing과 Timer로 만든 공 튀기기 애니메이션.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/java-bouncing-ball/";
           
         },
       },{id: "projects-fruit-box",
