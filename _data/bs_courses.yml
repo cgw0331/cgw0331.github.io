@@ -1,0 +1,71 @@
+# Undergraduate courses by semester. Source: official transcript (course names and credits only).
+- year: 1
+  term: Spring 2019
+  courses:
+    - { en: "Writing and Speaking", ko: "글쓰기와말하기", credits: 3 }
+    - { en: "English Communication (Reading, Writing)", ko: "의사소통영어(읽기,쓰기)", credits: 2 }
+    - { en: "College Japanese", ko: "대학일본어", credits: 3 }
+    - { en: "C Programming 1", ko: "C프로그래밍1", credits: 3 }
+    - { en: "Java Programming 1", ko: "자바프로그래밍1", credits: 3 }
+    - { en: "Introduction to Computers", ko: "컴퓨터개론", credits: 3 }
+    - { en: "Career Exploration and Planning", ko: "진로탐색과꿈-설계", credits: 1 }
+- year: 1
+  term: Fall 2019
+  courses:
+    - { en: "Computational Thinking", ko: "컴퓨팅사고력", credits: 3 }
+    - { en: "English Communication (Listening, Speaking)", ko: "의사소통영어(듣기,말하기)", credits: 2 }
+    - { en: "Happiness and the Humanities", ko: "행복과인문학", credits: 3 }
+    - { en: "Career Exploration", ko: "진로탐색", credits: 2 }
+    - { en: "Probability and Statistics", ko: "확률및통계", credits: 3 }
+    - { en: "C Programming 2", ko: "C프로그래밍2", credits: 3 }
+    - { en: "Java Programming 2", ko: "자바프로그래밍2", credits: 3 }
+- year: 2
+  term: Spring 2020
+  courses:
+    - { en: "Sports and Health", ko: "스포츠와건강", credits: 3 }
+    - { en: "Discrete Mathematics", ko: "이산수학", credits: 3 }
+    - { en: "Data Structures", ko: "자료구조", credits: 3 }
+    - { en: "Logic Circuits and Lab", ko: "논리회로및실습", credits: 3 }
+    - { en: "Linux Programming", ko: "리눅스프로그래밍", credits: 3 }
+    - { en: "Web Programming", ko: "웹프로그래밍", credits: 3 }
+- year: 2
+  term: Fall 2020
+  courses:
+    - { en: "Mobile Programming", ko: "모바일프로그래밍", credits: 3 }
+    - { en: "Algorithms", ko: "알고리즘", credits: 3 }
+    - { en: "Problem-Solving Programming", ko: "문제해결프로그래밍", credits: 3 }
+    - { en: "Databases", ko: "데이터베이스", credits: 3 }
+    - { en: "Digital Image Processing", ko: "디지털영상처리", credits: 3 }
+    - { en: "Artificial Intelligence", ko: "인공지능", credits: 3 }
+- year: 3
+  term: Spring 2021
+  courses:
+    - { en: "Understanding Big Data", ko: "빅데이터의이해", credits: 3 }
+    - { en: "Operating Systems", ko: "운영체제", credits: 3 }
+    - { en: "Data Communications", ko: "데이터통신", credits: 3 }
+    - { en: "Computer Graphics", ko: "컴퓨터그래픽스", credits: 3 }
+    - { en: "Programming Languages", ko: "프로그래밍언어", credits: 3 }
+    - { en: "SW Convergence Capstone Design", ko: "SW융합캡스톤디자인", credits: 3 }
+- year: 3
+  term: Fall 2021
+  courses:
+    - { en: "Literature and Film", ko: "문학과영화", credits: 3 }
+    - { en: "Data Analysis Programming", ko: "데이터분석프로그래밍", credits: 3 }
+    - { en: "Computer Architecture", ko: "컴퓨터구조", credits: 3 }
+    - { en: "Computer Networks", ko: "컴퓨터네트워크", credits: 3 }
+    - { en: "Network Security", ko: "네트워크보안", credits: 3 }
+    - { en: "Practical Coding", ko: "실전코딩", credits: 3 }
+    - { en: "Career Choice and Planning", ko: "직업선택과꿈-설계", credits: 1 }
+- year: 4
+  term: Spring 2022
+  courses:
+    - { en: "Introduction to AI", ko: "AI입문", credits: 3 }
+    - { en: "Machine Learning", ko: "기계학습", credits: 3 }
+    - { en: "Capstone Design 1", ko: "캡스톤디자인1", credits: 3 }
+    - { en: "Computer Vision", ko: "컴퓨터비전", credits: 3 }
+- year: 4
+  term: Fall 2022
+  courses:
+    - { en: "Buddhism Asks, I Answer", ko: "불교가묻고내가답한다", credits: 3 }
+    - { en: "Capstone Design 2", ko: "캡스톤디자인2", credits: 3 }
+    - { en: "Natural Language Processing", ko: "자연어처리", credits: 3 }

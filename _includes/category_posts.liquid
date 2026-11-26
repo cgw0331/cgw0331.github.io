@@ -1,0 +1,10 @@
+{% assign cat_posts = site.categories[include.category] %}
+{% if cat_posts and cat_posts.size > 0 %}
+<ul class="sub-posts">
+{% for post in cat_posts %}
+<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="sub-empty">No posts yet.</p>
+{% endif %}
