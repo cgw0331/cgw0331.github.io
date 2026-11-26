@@ -344,7 +344,7 @@ display_categories: ["research", "dev", "game", "life", "lab", "club"]
 
 scholar:
   last_name: [Choi]
-  first_name: [GeonWoo, G.]
+  first_name: [Geon-Woo, Geonwoo, GeonWoo, G.]
 
   style: apa
   locale: en

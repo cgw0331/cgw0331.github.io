@@ -11,7 +11,10 @@ nav_order: 3
 
 🚧 This page is under construction. (제작 중입니다.)
 
-What I study and work on during my Ph.D. program will be collected here.
+- **Program**: Department of Data Science, Kangwon National University
+- **Lab**: Biomedical Data Science Lab (BDS Lab)
+- **MMO-VAE** — mask-guided multi-objective molecular optimization, extending the mask pooling idea from my master's work. [Code]({{ '/projects/mmo_vae/' | relative_url }}).
+- Current interests: ADMET and toxicity prediction, and retrieval-augmented generation / agents over biomedical knowledge.
 
 ## Study notes
 

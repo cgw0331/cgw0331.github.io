@@ -3,7 +3,7 @@ layout: default
 title: 한국어
 permalink: /ko/
 nav: true
-nav_order: 7
+nav_order: 8
 description: 강원대학교 의생명과학연구실(BDS Lab) 박사과정.
 ---
 
