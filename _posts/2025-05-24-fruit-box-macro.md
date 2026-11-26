@@ -23,21 +23,15 @@ _사과 게임 매크로_
 
 알고리즘을 기반으로 아무데서나 다운받아서 쓸 수 있도록 파이썬으로 프로그램을 만들었다.
 
-아래 구글 드라이브에서 다운받아서 실행하면 된다. (구글 드라이브 만약 다운 안되면, 사본 만들기 해서 다운받기)
+아래에서 받아서 실행하면 된다. 파일이 커서 분할 압축했으니 네 개를 모두 같은 폴더에 받고 `.zip`을 풀면 된다.
 
-(구글 드라이브에서 계속 짤려서 분할해서 올립니다)
+- [사과 게임 매크로.zip](https://blog.kakaocdn.net/dn/cR5Psa/dJMcaiookqK/2slwKGy7gmKGkkGu3ZDlz0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.zip?attach=1&knm=tfile.zip) — 17.12MB
 
-[사과 게임 매크로.zip
-17.12MB](https://blog.kakaocdn.net/dn/cR5Psa/dJMcaiookqK/2slwKGy7gmKGkkGu3ZDlz0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.zip?attach=1&knm=tfile.zip)
+- [사과 게임 매크로.z01](https://blog.kakaocdn.net/dn/bogVGP/dJMcad1D6GP/p7yLcaszBzBvQTXDKn9ik0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z01?attach=1&knm=tfile.z01) — 19.53MB
 
-[사과 게임 매크로.z01
-19.53MB](https://blog.kakaocdn.net/dn/bogVGP/dJMcad1D6GP/p7yLcaszBzBvQTXDKn9ik0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z01?attach=1&knm=tfile.z01)
+- [사과 게임 매크로.z02](https://blog.kakaocdn.net/dn/mGBZj/dJMcad1D6Gt/sOn5R2DIp9cfkM5dYx40eK/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z02?attach=1&knm=tfile.z02) — 19.53MB
 
-[사과 게임 매크로.z02
-19.53MB](https://blog.kakaocdn.net/dn/mGBZj/dJMcad1D6Gt/sOn5R2DIp9cfkM5dYx40eK/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z02?attach=1&knm=tfile.z02)
-
-[사과 게임 매크로.z03
-19.53MB](https://blog.kakaocdn.net/dn/NLp23/dJMcachpUip/8ivoqq4TeGUNQP9BoJAJb0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z03?attach=1&knm=tfile.z03)
+- [사과 게임 매크로.z03](https://blog.kakaocdn.net/dn/NLp23/dJMcachpUip/8ivoqq4TeGUNQP9BoJAJb0/%EC%82%AC%EA%B3%BC%20%EA%B2%8C%EC%9E%84%20%EB%A7%A4%ED%81%AC%EB%A1%9C.z03?attach=1&knm=tfile.z03) — 19.53MB
 
 아래는 사과 게임 링크 (사과 박스 게임 바로가기다 [ctrl + 클릭] 으로 새창으로 열면된다.)
 
@@ -57,7 +51,7 @@ _폴더 안에 main.exe 실행하면 됨._
 
 우선 프로그램을 열어서 게임 영역 선택을 누룬다.
 
-1. **게임 영역 선택**하면 사과 박스 게임 영역 감싸면 됨.
+1. **게임 영역 선택** 하면 사과 박스 게임 영역 감싸면 됨.
 
 ![](/assets/img/blog/fruit-box-macro-04.png)
 
@@ -67,7 +61,7 @@ _영역 선택시 딱 맞게 해야 miss 안남_
 
 영역을 그림처럼 딱 맞게 설정해야 배열을 잘 인식하낟.
 
-**2.****배열 테스트 (Numpad 0)**하면 170개 사과가 다 보여야함.
+2. **배열 테스트 (Numpad 0)** 하면 170개 사과가 다 보여야함.
 
 ![](/assets/img/blog/fruit-box-macro-05.png)
 
@@ -84,7 +78,7 @@ _정상적인 배열 VS 잘못된 배열_
 
 배열 테스트 했을 때 170개가 잘 인식되어야 잘 작동한다.
 
-**3. 게임 시작 (F2)**누루고 계산 기다리기
+3. **게임 시작 (F2)** 누루고 계산 기다리기
 
 시작하면, 7초 정도 소요되며, 알고리즘을 계산한다.
 
@@ -114,21 +108,7 @@ _정상적인 배열 VS 잘못된 배열_
 
 [https://github.com/kevinychen/fruit-box-bot](https://github.com/kevinychen/fruit-box-bot)
 
-[
-
-GitHub - kevinychen/fruit-box-bot: A bot to get perfect score for the Fruit Box game
-A bot to get perfect score for the Fruit Box game. Contribute to kevinychen/fruit-box-bot development by creating an account on GitHub.
-github.com](https://github.com/kevinychen/fruit-box-bot)
-
-아무것도 없는 저의 github는 요기..
-
-[https://github.com/cgw0331](https://github.com/cgw0331)
-
-[
-
-cgw0331 - Overview
-Data Science Ph.D. student. Email : chlrjs3@naver.com - cgw0331
-github.com](https://github.com/cgw0331)
+제 깃허브는 [github.com/cgw0331](https://github.com/cgw0331) 입니다.
 
 깃허브에 코드를 올려놓긴 했는데,
 
